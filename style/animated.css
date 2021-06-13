@@ -1,0 +1,39 @@
+.cardH .descrition-body{
+display:none;
+}
+input:checked + .cardH .descrition-body{
+display: block;
+position: absolute;
+max-width: 600px;
+height: auto;
+}
+.descrition-title{
+cursor: pointer;
+margin: 5px;
+display: flex;
+justify-content:space-between;
+align-items: baseline;
+box-sizing: border-box;  
+}         
+.descrition-title::before{
+content: '';
+display: inline-block;
+height: 15px;
+width: 15px;
+background-color: red;
+margin-right: 10px;
+}
+.descrition-title::after{
+content: '+';
+color:red;
+transform: scale(2.5);
+transition: transform .3s ease;
+} 
+.input-trigger:checked + .cardH .descrition-title::after{
+transform: rotate(45deg) scale(2.7);
+}
+.input-trigger{
+display: none;
+}
+    
+   
